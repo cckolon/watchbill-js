@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watchbill</title>
+</head>
+ 
+<body id = 'body'>
+    <script type = 'module' src = "watchbill.js"></script>
+    <p>Number of Watchstanders</p>
+    <input type = "number" id = "numWatchstanders" value = "4">
+    <p>Minimum Days Off Between Duty Days</p>
+    <input type = "number" id = "daysOffBetweenDuty" value = "2">
+    <br>
+    <p>Start Date</p>
+    <input type = "date" id = "startDate" value = "2022-02-20">
+    <br>
+    <p>End Date</p>
+    <input type = "date" id = "endDate" value = "2022-02-26">
+    <br><br>
+    <input type = "button" id = "buildButton" value = "Submit">
+    <hr>
+    <div id = 'tableHolder'></div>
+    <div id = 'tableOut'></div>
+    <pre id = 'out'></pre>
+    <pre id = 'cplex'></pre>
+</body> 
+ 
+</html>

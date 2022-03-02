@@ -1,0 +1,3 @@
+[submodule "glpk.js"]
+	path = glpk.js
+	url = https://github.com/jvail/glpk.js
