@@ -121,7 +121,6 @@ function generateLP() {
                     document.getElementById('wb_w'+i+'d'+j).innerHTML = "";
                     if (res.result.vars['w'+i+'d'+j] == 1) {
                         document.getElementById('wb_w'+i+'d'+j).innerHTML = "X";
-                        console.log('w'+i+'d'+j);
                     }
                 }
             }
@@ -216,6 +215,7 @@ function generateLP() {
         // options
         const opt = {
             msglev: glpk.GLP_MSG_OFF,
+            tmlim: 1
         };
 
         // solve once, to determine the minimum spread
@@ -279,8 +279,6 @@ function generateLP() {
             .catch(err => console.log(err));
 
         }
-
-        //window.document.getElementById('cplex').innerHTML = await glpk.write(lp);
     })();
 }
 
@@ -325,7 +323,7 @@ function buildOutputTable() {
 }
 
 function solveLP() {
-    buildOutputTable();
     parseInputTable();
+    buildOutputTable();
     generateLP();
 }
